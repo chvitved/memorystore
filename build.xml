@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!-- the project element's name attribute will be used in the name of the module's jar file -->
+<project name="memorystore" default="compile" basedir=".">
+	
+	<path id="srcpath">
+	  <pathelement location="src"/>
+	  <pathelement location="test"/>
+	</path>
+	
+	<property file="build.properties"/>
+		
+	<property name="src.dir" value="src"/>
+	<property name="target.dir" value="target"/>
+	<property name="build.dir" value="${target.dir}/build"/>
+
+	<property name="scala-compiler.jar" value="${scala.home}/lib/scala-compiler.jar"/>
+	<property name="scala-library.jar" value="${scala.home}/lib/scala-library.jar"/>
+
+	<path id="scala.classpath">
+	  <pathelement location="${scala-compiler.jar}"/>
+	  <pathelement location="${scala-library.jar}"/>
+	</path>
+	
+	<path id="project.classpath">
+	
+	  <pathelement location="${build.dir}"/>
+	  <path refid="scala.classpath"/>
+	  <path refid="srcpath"/>
+
+	  <pathelement location="${build.dir}"/>
+	  <pathelement location="${stamdata-annotations.jar}"/>
+	  <pathelement location="${stamdata-parser.jar}"/>
+
+		<fileset dir="lib">
+            <include name="**/*.jar"/>
+        </fileset>
+
+	</path>
+
+	<taskdef resource="scala/tools/ant/antlib.xml">
+	  <classpath refid="scala.classpath"/>
+	</taskdef>
+	
+	<target name="clean">
+		<delete dir="${target}"/>
+	</target>
+	
+	<target name="init">
+		<mkdir dir="${target.dir}"/>
+	</target>
+
+	<target name="compile" depends="">
+	  <mkdir dir="${build.dir}"/>
+	  <scalac destdir="${build.dir}" classpathref="project.classpath" force="changed">
+	  	<src refid="srcpath" />	  	
+	  </scalac>
+	  <!-- scalac can also compile java files but I didnt get it to work -->
+	  <javac destdir="${build.dir}" classpathref="project.classpath">
+	  	<src refid="srcpath" />
+	  </javac>
+	</target>
+			
+	<target name="test" depends="clean, compile">
+		<mkdir dir="${target.dir}/junit"/>
+		<junit forkmode="once" fork="true" maxmemory="512" haltonerror="true" haltonfailure="true">			
+			<classpath refid="project.classpath" />		
+			<formatter type="xml"/>
+			<batchtest fork="yes" todir="${target.dir}/junit">
+				<fileset dir="${build.dir}">
+					<include name="**/*Test*.class"/>
+					<exclude name="**/*$*.class"/>
+					<exclude name="**/Abstract*.class"/>
+				</fileset>
+			</batchtest>
+		</junit>
+		<mkdir dir="${target.dir}/junit/html"/>
+		<junitreport todir="${target.dir}/junit/html">
+		  <fileset dir="${target.dir}/junit">
+			<include name="TEST-*.xml"/>
+		  </fileset>
+   		  <report format="frames" todir="${target.dir}/junit/html" />
+		</junitreport>
+	</target>
+	
+</project>

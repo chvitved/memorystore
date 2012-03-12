@@ -1,0 +1,93 @@
+Time 15391ms
+number of persons: 636827
+memory: 126.977736m
+2009-08-05 23:31:50,848 [DEBUG] dk.stamdata.EntityManager - started query <---------------------
+2009-08-05 23:31:50,851 [DEBUG] dk.stamdata.query.Query - parsing query
+2009-08-05 23:31:50,893 [DEBUG] dk.stamdata.query.Query - done parsing in 42ms
+2009-08-05 23:31:50,893 [DEBUG] dk.stamdata.query.Query - creating code for query
+2009-08-05 23:31:50,900 [DEBUG] dk.stamdata.query.Query - done creating code in 7ms
+2009-08-05 23:31:50,900 [DEBUG] dk.stamdata.query.Query - Running query code
+2009-08-05 23:31:50,984 [DEBUG] dk.stamdata.query.QueryRunner$ - Expression: AnalyzedLeafExpression(BinaryOpExp(Attribute(person.personIdentifer),==,StringLitteral(1111111119)),<function>,<function>)
+ Results before: 636827
+ Results after: 0
+ Using index: true
+2009-08-05 23:31:50,984 [DEBUG] dk.stamdata.query.QueryRunner$ - Union of 0 and 0
+2009-08-05 23:31:50,984 [DEBUG] dk.stamdata.query.Query - done running code in 84ms
+2009-08-05 23:31:50,985 [DEBUG] dk.stamdata.EntityManager - query finsihed in 133ms ----------------------
+2009-08-05 23:31:50,985 [DEBUG] dk.stamdata.EntityManager - started query <---------------------
+2009-08-05 23:31:50,985 [DEBUG] dk.stamdata.query.Query - parsing query
+2009-08-05 23:31:50,985 [DEBUG] dk.stamdata.query.Query - done parsing in 0ms
+2009-08-05 23:31:50,985 [DEBUG] dk.stamdata.query.Query - creating code for query
+2009-08-05 23:31:50,985 [DEBUG] dk.stamdata.query.Query - done creating code in 0ms
+2009-08-05 23:31:50,985 [DEBUG] dk.stamdata.query.Query - Running query code
+2009-08-05 23:31:50,986 [DEBUG] dk.stamdata.query.QueryRunner$ - Expression: AnalyzedLeafExpression(BinaryOpExp(Attribute(person.personIdentifer),==,StringLitteral(1111111118)),<function>,<function>)
+ Results before: 636827
+ Results after: 15964
+ Using index: true
+2009-08-05 23:31:50,986 [DEBUG] dk.stamdata.query.QueryRunner$ - Union of 15964 and 0
+2009-08-05 23:31:51,034 [DEBUG] dk.stamdata.query.Query - done running code in 49ms
+2009-08-05 23:31:51,034 [DEBUG] dk.stamdata.EntityManager - query finsihed in 49ms ----------------------
+2009-08-05 23:31:51,035 [DEBUG] dk.stamdata.EntityManager - started query <---------------------
+2009-08-05 23:31:51,035 [DEBUG] dk.stamdata.query.Query - parsing query
+2009-08-05 23:31:51,036 [DEBUG] dk.stamdata.query.Query - done parsing in 1ms
+2009-08-05 23:31:51,036 [DEBUG] dk.stamdata.query.Query - creating code for query
+2009-08-05 23:31:51,036 [DEBUG] dk.stamdata.query.Query - done creating code in 0ms
+2009-08-05 23:31:51,036 [DEBUG] dk.stamdata.query.Query - Running query code
+2009-08-05 23:31:51,036 [DEBUG] dk.stamdata.query.QueryRunner$ - Expression: AnalyzedLeafExpression(BinaryOpExp(Attribute(person.personIdentifer),==,StringLitteral(1111111119)),<function>,<function>)
+ Results before: 636827
+ Results after: 0
+ Using index: true
+2009-08-05 23:31:51,036 [DEBUG] dk.stamdata.query.QueryRunner$ - Union of 0 and 0
+2009-08-05 23:31:51,036 [DEBUG] dk.stamdata.query.Query - done running code in 0ms
+2009-08-05 23:31:51,037 [DEBUG] dk.stamdata.EntityManager - query finsihed in 2ms ----------------------
+2009-08-05 23:31:51,037 [DEBUG] dk.stamdata.EntityManager - started query <---------------------
+2009-08-05 23:31:51,045 [DEBUG] dk.stamdata.query.Query - parsing query
+2009-08-05 23:31:51,046 [DEBUG] dk.stamdata.query.Query - done parsing in 1ms
+2009-08-05 23:31:51,046 [DEBUG] dk.stamdata.query.Query - creating code for query
+2009-08-05 23:31:51,046 [DEBUG] dk.stamdata.query.Query - done creating code in 0ms
+2009-08-05 23:31:51,046 [DEBUG] dk.stamdata.query.Query - Running query code
+2009-08-05 23:31:51,046 [DEBUG] dk.stamdata.query.QueryRunner$ - Expression: AnalyzedLeafExpression(BinaryOpExp(Attribute(person.firstName),==,StringLitteral(Anita)),<function>,<function>)
+ Results before: 636827
+ Results after: 15964
+ Using index: true
+2009-08-05 23:31:51,046 [DEBUG] dk.stamdata.query.QueryRunner$ - Union of 15964 and 0
+2009-08-05 23:31:51,057 [DEBUG] dk.stamdata.query.Query - done running code in 11ms
+2009-08-05 23:31:51,057 [DEBUG] dk.stamdata.EntityManager - query finsihed in 12ms ----------------------
+2009-08-05 23:31:51,063 [DEBUG] dk.stamdata.EntityManager - started query <---------------------
+2009-08-05 23:31:51,063 [DEBUG] dk.stamdata.query.Query - parsing query
+2009-08-05 23:31:51,091 [DEBUG] dk.stamdata.query.Query - done parsing in 28ms
+2009-08-05 23:31:51,091 [DEBUG] dk.stamdata.query.Query - creating code for query
+2009-08-05 23:31:51,091 [DEBUG] dk.stamdata.query.Query - done creating code in 0ms
+2009-08-05 23:31:51,091 [DEBUG] dk.stamdata.query.Query - Running query code
+start iterating
+end iterating: 419
+2009-08-05 23:31:51,529 [DEBUG] dk.stamdata.query.QueryRunner$ - Expression: AnalyzedLeafExpression(BinaryOpExp(Attribute(person.status),==,Value(90)),<function>,null)
+ Results before: 636827
+ Results after: 47701
+ Using index: false
+2009-08-05 23:31:51,529 [DEBUG] dk.stamdata.query.QueryRunner$ - Union of 47701 and 0
+2009-08-05 23:31:51,560 [DEBUG] dk.stamdata.query.Query - done running code in 469ms
+2009-08-05 23:31:51,560 [DEBUG] dk.stamdata.EntityManager - query finsihed in 497ms ----------------------
+2009-08-05 23:31:51,560 [DEBUG] dk.stamdata.EntityManager - started query <---------------------
+2009-08-05 23:31:51,560 [DEBUG] dk.stamdata.query.Query - parsing query
+2009-08-05 23:31:51,561 [DEBUG] dk.stamdata.query.Query - done parsing in 1ms
+2009-08-05 23:31:51,561 [DEBUG] dk.stamdata.query.Query - creating code for query
+start iterating
+2009-08-05 23:31:51,561 [DEBUG] dk.stamdata.query.Query - done creating code in 0ms
+2009-08-05 23:31:51,561 [DEBUG] dk.stamdata.query.Query - Running query code
+end iterating: 166
+start iterating
+2009-08-05 23:31:51,747 [DEBUG] dk.stamdata.query.QueryRunner$ - Expression: AnalyzedLeafExpression(BinaryOpExp(Attribute(person.status),==,Value(90)),<function>,null)
+ Results before: 636827
+ Results after: 47701
+ Using index: false
+end iterating: 172
+2009-08-05 23:31:51,935 [DEBUG] dk.stamdata.query.QueryRunner$ - Expression: AnalyzedLeafExpression(BinaryOpExp(Attribute(person.status),==,Value(5)),<function>,null)
+ Results before: 636827
+ Results after: 15921
+ Using index: false
+2009-08-05 23:31:51,935 [DEBUG] dk.stamdata.query.QueryRunner$ - Union of 15921 and 0
+2009-08-05 23:31:51,944 [DEBUG] dk.stamdata.query.QueryRunner$ - Union of 47701 and 15921
+2009-08-05 23:31:51,999 [DEBUG] dk.stamdata.query.Query - done running code in 438ms
+2009-08-05 23:31:51,999 [DEBUG] dk.stamdata.EntityManager - query finsihed in 439ms ----------------------
+done
